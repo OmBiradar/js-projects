@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    justify-content: center;
+    border: 10px solid gray;
+    width: 50%;
+    margin: auto;
+    height: 50vh;
+}
