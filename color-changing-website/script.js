@@ -42,7 +42,12 @@ const colorChanger = document.getElementById('colorChanger')
 
 colorChanger.addEventListener('click', function () {
     console.log("Script is running...");
-    color = colors[Math.floor(Math.random() * colors.length)];
+
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    while(color === document.body.style.backgroundColor){
+        color = colors[Math.floor(Math.random() * colors.length)];
+    }
+
     document.body.style.backgroundColor = color;
     document.getElementById('currentColor').textContent = 'The current color is ' + color;
 });
